@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
 })
 
 
+
+
 const users = [
     {
         id: 1, name: 'Arman', email: 'mir@arman.com'
@@ -36,6 +38,12 @@ const users = [
 app.get('/users', (req, res) => {
     res.send(users);
 })
+
+
+app.post("/users", (req, res) => {
+    console.log("Post method called");
+    
+});
 
 
 
