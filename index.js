@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
-
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send("Users Server Is Available at 3000")
@@ -41,7 +41,9 @@ app.get('/users', (req, res) => {
 
 
 app.post("/users", (req, res) => {
-    console.log("Post method called");
+    console.log("Post method called", req.body);
+    
+    const newUser = req.body;
     
 });
 
